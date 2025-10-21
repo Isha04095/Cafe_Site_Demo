@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About ShivCafe - Our Story, Philosophy & Community</title>
+    <meta name="description" content="Discover the story behind ShivCafe - where traditional coffee craftsmanship meets contemporary café culture. Learn about our sustainability mission, expert team, and community commitment.">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fshivcafe8149back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.9"></script>
+  <script type="module" src="https://static.rocket.new/rocket-shot.js?v=0.0.1"></script>
+  </head>
+<body class="bg-background">
+    <!-- Loading Spinner -->
+    <div id="loading-spinner" class="fixed inset-0 bg-primary z-100 flex items-center justify-center">
+        <div class="text-center">
+            <div class="animate-spin rounded-full h-16 w-16 border-4 border-accent border-t-transparent mb-4"></div>
+            <p class="text-white font-accent text-xl">Brewing Our Story...</p>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300">
+        <div class="container-max px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <a href="homepage.html" class="flex items-center space-x-2">
+                        <div class="w-10 h-10 bg-accent rounded-full flex items-center justify-center">
+                            <i class="fas fa-coffee text-white text-lg"></i>
+                        </div>
+                        <span class="font-accent text-2xl font-bold text-primary">ShivCafe</span>
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="homepage.html" class="nav-link text-text-secondary font-medium hover:text-accent transition-colors duration-200 relative">
+                            Home
+                            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-accent transition-all duration-300 hover:w-full"></span>
+                        </a>
+                        <a href="menu.html" class="nav-link text-text-secondary font-medium hover:text-accent transition-colors duration-200 relative">
+                            Menu
+                            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-accent transition-all duration-300 hover:w-full"></span>
+                        </a>
+                        <a href="about.html" class="nav-link text-primary font-medium hover:text-accent transition-colors duration-200 relative">
+                            About
+                            <span class="absolute bottom-0 left-0 w-full h-0.5 bg-accent transition-all duration-300"></span>
+                        </a>
+                        <a href="gallery.html" class="nav-link text-text-secondary font-medium hover:text-accent transition-colors duration-200 relative">
+                            Gallery
+                            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-accent transition-all duration-300 hover:w-full"></span>
+                        </a>
+                        <a href="contact.html" class="nav-link text-text-secondary font-medium hover:text-accent transition-colors duration-200 relative">
+                            Contact
+                            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-accent transition-all duration-300 hover:w-full"></span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-primary hover:text-accent focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white shadow-warm-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="homepage.html" class="block px-3 py-2 text-text-secondary hover:text-accent">Home</a>
+                <a href="menu.html" class="block px-3 py-2 text-text-secondary hover:text-accent">Menu</a>
+                <a href="about.html" class="block px-3 py-2 text-primary font-medium">About</a>
+                <a href="gallery.html" class="block px-3 py-2 text-text-secondary hover:text-accent">Gallery</a>
+                <a href="contact.html" class="block px-3 py-2 text-text-secondary hover:text-accent">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <!-- Background Image with Parallax -->
+        <div class="absolute inset-0 z-0" id="parallax-bg">
+            <img src="https://images.unsplash.com/photo-1538665216082-301de62859b7" 
+                 alt="Artisan barista carefully pouring steamed milk into coffee cup creating latte art in warm café setting" 
+                 class="w-full h-full object-cover"
+                 onerror="this.src='https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;">
+            <div class="absolute inset-0 bg-primary opacity-70"></div>
+        </div>
+
+        <!-- Hero Content -->
+        <div class="relative z-10 text-center text-white px-4 sm:px-6 lg:px-8">
+            <h1 class="font-headline text-4xl md:text-6xl lg:text-hero font-bold mb-6" data-aos="fade-up">
+                Our Story of
+                <span class="text-accent">Transformation</span>
+            </h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+                Where traditional coffee craftsmanship meets contemporary café culture, creating a sanctuary for those who appreciate quality, authenticity, and meaningful connections.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center" data-aos="fade-up" data-aos-delay="400">
+                <a href="#our-story" class="btn-accent inline-flex items-center">
+                    <i class="fas fa-book-open mr-2"></i>
+                    Discover Our Journey
+                </a>
+                <a href="#team" class="btn-secondary inline-flex items-center">
+                    <i class="fas fa-users mr-2"></i>
+                    Meet Our Team
+                </a>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <i class="fas fa-chevron-down text-white text-2xl"></i>
+        </div>
+    </section>
+
+    <!-- Brand Philosophy Section -->
+    <section id="our-story" class="section-padding bg-surface">
+        <div class="container-max">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <h2 class="font-headline text-3xl md:text-4xl font-bold text-primary mb-6">
+                        The Philosophy Behind Every Cup
+                    </h2>
+                    <p class="text-lg text-text-secondary mb-6">
+                        ShivCafe was born from a simple belief: that coffee is more than just a beverage—it's a catalyst for transformation. The name "Shiv" represents both strength and change, much like the perfect roast that transforms humble beans into extraordinary experiences.
+                    </p>
+                    <p class="text-lg text-text-secondary mb-6">
+                        We've created a space where traditional craftsmanship meets contemporary culture, where every cup tells a story of dedication, quality, and community. Our mission extends beyond serving exceptional coffee; we're curating elevated everyday moments that inspire and connect.
+                    </p>
+                    <div class="flex items-center space-x-4">
+                        <div class="w-16 h-16 bg-accent rounded-full flex items-center justify-center">
+                            <i class="fas fa-heart text-white text-2xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-headline text-xl font-semibold text-primary">Crafted with Passion</h3>
+                            <p class="text-text-secondary">Every detail matters in our pursuit of excellence</p>
+                        </div>
+                    </div>
+                </div>
+                <div data-aos="fade-left">
+                    <img src="https://images.unsplash.com/photo-1669817474104-a35ec8148978" 
+                         alt="Close-up of coffee beans being carefully roasted in traditional roasting equipment with warm golden lighting" 
+                         class="w-full h-96 object-cover rounded-2xl shadow-warm-lg"
+                         onerror="this.src='https://images.pixabay.com/photo/2016/11/29/12/54/coffee-1869820_1280.jpg'; this.onerror=null;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section class="section-padding bg-background">
+        <div class="container-max">
+            <div class="text-center mb-16">
+                <h2 class="font-headline text-3xl md:text-4xl font-bold text-primary mb-4" data-aos="fade-up">
+                    Our Journey Through Time
+                </h2>
+                <p class="text-lg text-text-secondary max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+                    From a small dream to a community cornerstone, discover the milestones that shaped ShivCafe into what it is today.
+                </p>
+            </div>
+
+            <div class="relative">
+                <!-- Timeline Line -->
+                <div class="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-accent-200"></div>
+
+                <!-- Timeline Items -->
+                <div class="space-y-12">
+                    <!-- 2018 -->
+                    <div class="relative flex items-center" data-aos="fade-up" data-aos-delay="100">
+                        <div class="flex-1 text-right pr-8">
+                            <div class="card">
+                                <h3 class="font-headline text-xl font-semibold text-primary mb-2">The Beginning</h3>
+                                <p class="text-accent font-medium mb-2">2018</p>
+                                <p class="text-text-secondary">Founded with a vision to create a community space where exceptional coffee meets meaningful connections. Our first location opened with just three signature blends.</p>
+                            </div>
+                        </div>
+                        <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-accent rounded-full border-4 border-white shadow-warm"></div>
+                        <div class="flex-1 pl-8"></div>
+                    </div>
+
+                    <!-- 2020 -->
+                    <div class="relative flex items-center" data-aos="fade-up" data-aos-delay="200">
+                        <div class="flex-1 pr-8"></div>
+                        <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-accent rounded-full border-4 border-white shadow-warm"></div>
+                        <div class="flex-1 pl-8">
+                            <div class="card">
+                                <h3 class="font-headline text-xl font-semibold text-primary mb-2">Sustainability Focus</h3>
+                                <p class="text-accent font-medium mb-2">2020</p>
+                                <p class="text-text-secondary">Launched our comprehensive sustainability program, partnering directly with coffee farmers and implementing eco-friendly practices throughout our operations.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2022 -->
+                    <div class="relative flex items-center" data-aos="fade-up" data-aos-delay="300">
+                        <div class="flex-1 text-right pr-8">
+                            <div class="card">
+                                <h3 class="font-headline text-xl font-semibold text-primary mb-2">Community Recognition</h3>
+                                <p class="text-accent font-medium mb-2">2022</p>
+                                <p class="text-text-secondary">Awarded "Best Community Café" by the Local Business Association and recognized for our commitment to supporting local artists and remote workers.</p>
+                            </div>
+                        </div>
+                        <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-accent rounded-full border-4 border-white shadow-warm"></div>
+                        <div class="flex-1 pl-8"></div>
+                    </div>
+
+                    <!-- 2024 -->
+                    <div class="relative flex items-center" data-aos="fade-up" data-aos-delay="400">
+                        <div class="flex-1 pr-8"></div>
+                        <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-accent rounded-full border-4 border-white shadow-warm"></div>
+                        <div class="flex-1 pl-8">
+                            <div class="card">
+                                <h3 class="font-headline text-xl font-semibold text-primary mb-2">Expansion & Innovation</h3>
+                                <p class="text-accent font-medium mb-2">2024</p>
+                                <p class="text-text-secondary">Opened our second location and launched our coffee education center, offering brewing workshops and origin tastings to deepen community engagement.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2025 -->
+                    <div class="relative flex items-center" data-aos="fade-up" data-aos-delay="500">
+                        <div class="flex-1 text-right pr-8">
+                            <div class="card">
+                                <h3 class="font-headline text-xl font-semibold text-primary mb-2">Future Vision</h3>
+                                <p class="text-accent font-medium mb-2">2025</p>
+                                <p class="text-text-secondary">Continuing our mission to transform everyday moments into extraordinary experiences, with plans for community partnerships and innovative coffee experiences.</p>
+                            </div>
+                        </div>
+                        <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-accent rounded-full border-4 border-white shadow-warm"></div>
+                        <div class="flex-1 pl-8"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="section-padding bg-surface">
+        <div class="container-max">
+            <div class="text-center mb-16">
+                <h2 class="font-headline text-3xl md:text-4xl font-bold text-primary mb-4" data-aos="fade-up">
+                    Meet Our Expert Team
+                </h2>
+                <p class="text-lg text-text-secondary max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+                    The passionate individuals behind every perfect cup, bringing years of expertise and dedication to craft your ideal coffee experience.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Team Member 1 -->
+                <div class="card text-center group cursor-pointer" data-aos="fade-up" data-aos-delay="100">
+                    <div class="relative mb-6 overflow-hidden rounded-full w-32 h-32 mx-auto">
+                        <img src="https://images.unsplash.com/photo-1717229771525-ffb3640225a8" 
+                             alt="Portrait of Arjun Patel, Head Roaster and Coffee Expert, smiling warmly in café uniform" 
+                             class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                             onerror="this.src='https://images.pixabay.com/photo/2016/11/21/12/42/beard-1845166_1280.jpg'; this.onerror=null;">
+                    </div>
+                    <h3 class="font-headline text-xl font-semibold text-primary mb-2">Arjun Patel</h3>
+                    <p class="text-accent font-medium mb-3">Head Roaster & Coffee Expert</p>
+                    <p class="text-text-secondary mb-4">With 12 years of experience in coffee roasting, Arjun brings precision and passion to every batch. Certified by the Specialty Coffee Association.</p>
+                    <div class="flex justify-center space-x-3">
+                        <div class="w-8 h-8 bg-accent-100 rounded-full flex items-center justify-center">
+                            <i class="fas fa-fire text-accent text-sm"></i>
+                        </div>
+                        <div class="w-8 h-8 bg-accent-100 rounded-full flex items-center justify-center">
+                            <i class="fas fa-certificate text-accent text-sm"></i>
+                        </div>
+                        <div class="w-8 h-8 bg-accent-100 rounded-full flex items-center justify-center">
+                            <i class="fas fa-award text-accent text-sm"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Member 2 -->
+                <div class="card text-center group cursor-pointer" data-aos="fade-up" data-aos-delay="200">
+                    <div class="relative mb-6 overflow-hidden rounded-full w-32 h-32 mx-auto">
+                        <img src="https://images.unsplash.com/photo-1643245253747-dde2278a3eb3" 
+                             alt="Portrait of Maya Chen, Lead Barista and Latte Art Specialist, creating beautiful coffee art" 
+                             class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                             onerror="this.src='https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;">
+                    </div>
+                    <h3 class="font-headline text-xl font-semibold text-primary mb-2">Maya Chen</h3>
+                    <p class="text-accent font-medium mb-3">Lead Barista & Latte Art Specialist</p>
+                    <p class="text-text-secondary mb-4">Maya's artistic flair and technical expertise create the perfect balance in every cup. Winner of three regional latte art competitions.</p>
+                    <div class="flex justify-center space-x-3">
+                        <div class="w-8 h-8 bg-accent-100 rounded-full flex items-center justify-center">
+                            <i class="fas fa-palette text-accent text-sm"></i>
+                        </div>
+                        <div class="w-8 h-8 bg-accent-100 rounded-full flex items-center justify-center">
+                            <i class="fas fa-trophy text-accent text-sm"></i>
+                        </div>
+                        <div class="w-8 h-8 bg-accent-100 rounded-full flex items-center justify-center">
+                            <i class="fas fa-star text-accent text-sm"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Member 3 -->
+                <div class="card text-center group cursor-pointer" data-aos="fade-up" data-aos-delay="300">
+                    <div class="relative mb-6 overflow-hidden rounded-full w-32 h-32 mx-auto">
+                        <img src="https://images.unsplash.com/photo-1587275600202-6899d68ac0b2" 
+                             alt="Portrait of David Rodriguez, Café Manager and Community Coordinator, welcoming customers with genuine smile" 
+                             class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                             onerror="this.src='https://images.pixabay.com/photo/2017/06/26/02/47/man-2442565_1280.jpg'; this.onerror=null;">
+                    </div>
+                    <h3 class="font-headline text-xl font-semibold text-primary mb-2">David Rodriguez</h3>
+                    <p class="text-accent font-medium mb-3">Café Manager & Community Coordinator</p>
+                    <p class="text-text-secondary mb-4">David ensures every guest feels at home while coordinating our community events and sustainability initiatives. A true hospitality professional.</p>
+                    <div class="flex justify-center space-x-3">
+                        <div class="w-8 h-8 bg-accent-100 rounded-full flex items-center justify-center">
+                            <i class="fas fa-users text-accent text-sm"></i>
+                        </div>
+                        <div class="w-8 h-8 bg-accent-100 rounded-full flex items-center justify-center">
+                            <i class="fas fa-leaf text-accent text-sm"></i>
+                        </div>
+                        <div class="w-8 h-8 bg-accent-100 rounded-full flex items-center justify-center">
+                            <i class="fas fa-handshake text-accent text-sm"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sustainability Mission -->
+    <section class="section-padding bg-primary text-white">
+        <div class="container-max">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div data-aos="fade-right">
+                    <img src="https://images.unsplash.com/photo-1642667872796-65b40b2a2bf8" 
+                         alt="Sustainable coffee plantation with farmers working among lush green coffee plants in mountainous terrain" 
+                         class="w-full h-96 object-cover rounded-2xl shadow-warm-lg"
+                         onerror="this.src='https://images.pexels.com/photos/1695052/pexels-photo-1695052.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;">
+                </div>
+                <div data-aos="fade-left">
+                    <h2 class="font-headline text-3xl md:text-4xl font-bold mb-6">
+                        Our Commitment to
+                        <span class="text-accent">Sustainability</span>
+                    </h2>
+                    <p class="text-xl mb-6">
+                        We believe that great coffee should never come at the expense of our planet or the communities that grow it. Our sustainability mission is woven into every aspect of our operations.
+                    </p>
+                    
+                    <!-- Sustainability Metrics -->
+                    <div class="grid grid-cols-2 gap-6 mb-8">
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-accent mb-2" id="counter-farmers">0</div>
+                            <p class="text-secondary-200">Partner Farmers</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-accent mb-2" id="counter-waste">0</div>
+                            <p class="text-secondary-200">% Waste Reduction</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-accent mb-2" id="counter-renewable">0</div>
+                            <p class="text-secondary-200">% Renewable Energy</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-accent mb-2" id="counter-trees">0</div>
+                            <p class="text-secondary-200">Trees Planted</p>
+                        </div>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-leaf text-accent mr-3"></i>
+                            <span>Direct trade partnerships with coffee farmers</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-recycle text-accent mr-3"></i>
+                            <span>Zero-waste café operations and composting program</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-solar-panel text-accent mr-3"></i>
+                            <span>100% renewable energy in all locations</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-seedling text-accent mr-3"></i>
+                            <span>Reforestation projects in coffee-growing regions</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Impact -->
+    <section class="section-padding bg-background">
+        <div class="container-max">
+            <div class="text-center mb-16">
+                <h2 class="font-headline text-3xl md:text-4xl font-bold text-primary mb-4" data-aos="fade-up">
+                    Community at Our Core
+                </h2>
+                <p class="text-lg text-text-secondary max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+                    ShivCafe is more than a coffee shop—we're a community hub that supports local artists, provides workspace for remote professionals, and fosters meaningful connections.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Local Artists -->
+                <div class="card text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 bg-accent-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-palette text-accent text-2xl"></i>
+                    </div>
+                    <h3 class="font-headline text-xl font-semibold text-primary mb-3">Local Art Gallery</h3>
+                    <p class="text-text-secondary mb-4">Our walls showcase rotating exhibitions from local artists, providing a platform for creative expression and community engagement.</p>
+                    <div class="text-accent font-medium">25+ Artists Featured</div>
+                </div>
+
+                <!-- Remote Work Hub -->
+                <div class="card text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 bg-accent-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-wifi text-accent text-2xl"></i>
+                    </div>
+                    <h3 class="font-headline text-xl font-semibold text-primary mb-3">Remote Work Haven</h3>
+                    <p class="text-text-secondary mb-4">High-speed WiFi, comfortable seating, and a productive atmosphere make us the perfect second office for digital nomads and freelancers.</p>
+                    <div class="text-accent font-medium">500+ Remote Workers</div>
+                </div>
+
+                <!-- Community Events -->
+                <div class="card text-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-16 h-16 bg-accent-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-calendar-alt text-accent text-2xl"></i>
+                    </div>
+                    <h3 class="font-headline text-xl font-semibold text-primary mb-3">Community Events</h3>
+                    <p class="text-text-secondary mb-4">From coffee cupping sessions to book clubs and networking events, we host gatherings that bring people together.</p>
+                    <div class="text-accent font-medium">50+ Events Annually</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Testimonials -->
+    <section class="section-padding bg-surface">
+        <div class="container-max">
+            <div class="text-center mb-16">
+                <h2 class="font-headline text-3xl md:text-4xl font-bold text-primary mb-4" data-aos="fade-up">
+                    Voices from Our Community
+                </h2>
+                <p class="text-lg text-text-secondary max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+                    Hear directly from our coffee suppliers, community partners, and the people who make ShivCafe a special place.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Video Testimonial 1 -->
+                <div class="card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="relative mb-4 rounded-lg overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1715138958579-4d4ea6eeafbb" 
+                             alt="Coffee farmer Carlos Mendez from Guatemala standing proudly in his coffee plantation with ripe coffee cherries" 
+                             class="w-full h-48 object-cover"
+                             onerror="this.src='https://images.pixabay.com/photo/2016/11/29/12/54/coffee-1869820_1280.jpg'; this.onerror=null;">
+                        <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                            <button class="w-16 h-16 bg-accent rounded-full flex items-center justify-center hover:bg-accent-600 transition-colors">
+                                <i class="fas fa-play text-white text-xl ml-1"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <h3 class="font-headline text-xl font-semibold text-primary mb-2">Carlos Mendez</h3>
+                    <p class="text-accent font-medium mb-2">Coffee Farmer, Guatemala</p>
+                    <p class="text-text-secondary">"Working with ShivCafe has transformed our farming community. Their direct trade partnership ensures fair prices and supports our sustainable practices."</p>
+                </div>
+
+                <!-- Video Testimonial 2 -->
+                <div class="card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="relative mb-4 rounded-lg overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1687585612488-20f482ede81d" 
+                             alt="Local artist Jennifer Walsh painting in her studio with ShivCafe coffee cup nearby, surrounded by colorful artwork" 
+                             class="w-full h-48 object-cover"
+                             onerror="this.src='https://images.pexels.com/photos/1251175/pexels-photo-1251175.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;">
+                        <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                            <button class="w-16 h-16 bg-accent rounded-full flex items-center justify-center hover:bg-accent-600 transition-colors">
+                                <i class="fas fa-play text-white text-xl ml-1"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <h3 class="font-headline text-xl font-semibold text-primary mb-2">Jennifer Walsh</h3>
+                    <p class="text-accent font-medium mb-2">Local Artist & Community Partner</p>
+                    <p class="text-text-secondary">"ShivCafe gave me my first gallery opportunity. Their support of local artists creates a vibrant cultural hub that enriches our entire neighborhood."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="section-padding bg-primary text-white">
+        <div class="container-max text-center">
+            <h2 class="font-headline text-3xl md:text-4xl font-bold mb-4" data-aos="fade-up">
+                Ready to Be Part of Our Story?
+            </h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+                Join our community of coffee lovers, remote workers, and local supporters. Experience the transformation that happens when passion meets purpose.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center" data-aos="fade-up" data-aos-delay="400">
+                <a href="contact.html" class="btn-accent">
+                    <i class="fas fa-map-marker-alt mr-2"></i>
+                    Visit Our Café
+                </a>
+                <a href="gallery.html" class="btn-secondary">
+                    <i class="fas fa-images mr-2"></i>
+                    See Our Space
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary-900 text-white section-padding">
+        <div class="container-max">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <!-- Brand -->
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-10 h-10 bg-accent rounded-full flex items-center justify-center">
+                            <i class="fas fa-coffee text-white text-lg"></i>
+                        </div>
+                        <span class="font-accent text-2xl font-bold">ShivCafe</span>
+                    </div>
+                    <p class="text-secondary-200 mb-4 max-w-md">
+                        Where every cup tells a story of artisanal excellence, community connection, and the perfect blend of tradition and innovation.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="javascript:void(0)" class="text-secondary-200 hover:text-accent transition-colors">
+                            <i class="fab fa-facebook-f text-xl"></i>
+                        </a>
+                        <a href="javascript:void(0)" class="text-secondary-200 hover:text-accent transition-colors">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="javascript:void(0)" class="text-secondary-200 hover:text-accent transition-colors">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="javascript:void(0)" class="text-secondary-200 hover:text-accent transition-colors">
+                            <i class="fab fa-youtube text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="font-headline text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="homepage.html" class="text-secondary-200 hover:text-accent transition-colors">Home</a></li>
+                        <li><a href="menu.html" class="text-secondary-200 hover:text-accent transition-colors">Menu</a></li>
+                        <li><a href="about.html" class="text-secondary-200 hover:text-accent transition-colors">About Us</a></li>
+                        <li><a href="gallery.html" class="text-secondary-200 hover:text-accent transition-colors">Gallery</a></li>
+                        <li><a href="contact.html" class="text-secondary-200 hover:text-accent transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="font-headline text-lg font-semibold mb-4">Contact Info</h3>
+                    <ul class="space-y-2 text-secondary-200">
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-2 text-accent"></i>
+                            123 Coffee Street, Bean City
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone mr-2 text-accent"></i>
+                            (555) 123-CAFE
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2 text-accent"></i>
+                            hello@shivcafe.com
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-clock mr-2 text-accent"></i>
+                            Mon-Sun: 6AM - 10PM
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Newsletter Signup -->
+            <div class="border-t border-primary-700 pt-8 mb-8">
+                <div class="text-center">
+                    <h3 class="font-headline text-xl font-semibold mb-4">Stay Connected</h3>
+                    <p class="text-secondary-200 mb-4">Subscribe to our newsletter for exclusive offers and coffee insights.</p>
+                    <div class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+                        <input type="email" placeholder="Enter your email" class="input-field flex-1 text-text-primary">
+                        <button class="btn-accent">
+                            <i class="fas fa-paper-plane mr-2"></i>
+                            Subscribe
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="border-t border-primary-700 pt-8 text-center">
+                <p class="text-secondary-200">
+                    © 2025 ShivCafe. All Rights Reserved. | Crafted with passion, served with purpose.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-accent text-white w-12 h-12 rounded-full shadow-warm-lg opacity-0 invisible transition-all duration-300 hover:bg-accent-600 hover:scale-110 z-50">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script>
+        // Loading Spinner
+        window.addEventListener('load', function() {
+            setTimeout(() => {
+                document.getElementById('loading-spinner').style.opacity = '0';
+                setTimeout(() => {
+                    document.getElementById('loading-spinner').style.display = 'none';
+                }, 300);
+            }, 1000);
+        });
+
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            offset: 100
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-white', 'shadow-warm-lg');
+                navbar.classList.remove('bg-transparent');
+            } else {
+                navbar.classList.remove('bg-white', 'shadow-warm-lg');
+                navbar.classList.add('bg-transparent');
+            }
+        });
+
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Parallax effect for hero background
+        window.addEventListener('scroll', function() {
+            const scrolled = window.pageYOffset;
+            const parallaxBg = document.getElementById('parallax-bg');
+            const speed = scrolled * 0.5;
+            parallaxBg.style.transform = `translateY(${speed}px)`;
+        });
+
+        // Counter animation for sustainability metrics
+        function animateCounter(id, target, duration = 2000) {
+            const element = document.getElementById(id);
+            const start = 0;
+            const increment = target / (duration / 16);
+            let current = start;
+
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    current = target;
+                    clearInterval(timer);
+                }
+                element.textContent = Math.floor(current);
+            }, 16);
+        }
+
+        // Trigger counters when sustainability section is in view
+        const sustainabilityObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounter('counter-farmers', 45);
+                    animateCounter('counter-waste', 85);
+                    animateCounter('counter-renewable', 100);
+                    animateCounter('counter-trees', 1250);
+                    sustainabilityObserver.unobserve(entry.target);
+                }
+            });
+        });
+
+        const sustainabilitySection = document.querySelector('#counter-farmers');
+        if (sustainabilitySection) {
+            sustainabilityObserver.observe(sustainabilitySection);
+        }
+
+        // Back to top button
+        const backToTopButton = document.getElementById('back-to-top');
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.add('opacity-0', 'invisible');
+                backToTopButton.classList.remove('opacity-100', 'visible');
+            }
+        });
+
+        backToTopButton.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add hover effects to navigation links
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('mouseenter', function() {
+                const span = this.querySelector('span');
+                if (span && !this.classList.contains('text-primary')) {
+                    span.style.width = '100%';
+                }
+            });
+            link.addEventListener('mouseleave', function() {
+                const span = this.querySelector('span');
+                if (span && !this.classList.contains('text-primary')) {
+                    span.style.width = '0%';
+                }
+            });
+        });
+
+        // Team member card interactions
+        document.querySelectorAll('.card.group').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-5px)';
+            });
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+
+        // Video testimonial play buttons
+        document.querySelectorAll('.fa-play').forEach(button => {
+            button.parentElement.addEventListener('click', function() {
+                // Placeholder for video modal functionality
+                alert('Video testimonial would play here in a modal or embedded player.');
+            });
+        });
+    </script>
+<script id="dhws-dataInjector" src="../public/dhws-data-injector.js"></script>
+</body>
+</html>

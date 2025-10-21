@@ -1,0 +1,1073 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - ShivCafe | Artisanal Coffee & Culinary Delights</title>
+    <meta name="description" content="Explore ShivCafe's premium coffee menu featuring artisanal blends, seasonal specials, and expertly crafted beverages. Discover your perfect cup today.">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fshivcafe8149back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.9"></script>
+  <script type="module" src="https://static.rocket.new/rocket-shot.js?v=0.0.1"></script>
+  </head>
+<body class="bg-background">
+    <!-- Loading Spinner -->
+    <div id="loading-spinner" class="fixed inset-0 bg-primary z-100 flex items-center justify-center">
+        <div class="text-center">
+            <div class="animate-spin rounded-full h-16 w-16 border-4 border-accent border-t-transparent mb-4"></div>
+            <p class="text-white font-accent text-xl">Brewing Excellence...</p>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300">
+        <div class="container-max px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <a href="homepage.html" class="flex items-center space-x-2">
+                        <div class="w-10 h-10 bg-accent rounded-full flex items-center justify-center">
+                            <i class="fas fa-coffee text-white text-lg"></i>
+                        </div>
+                        <span class="font-accent text-2xl font-bold text-primary">ShivCafe</span>
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="homepage.html" class="nav-link text-text-secondary font-medium hover:text-accent transition-colors duration-200 relative">
+                            Home
+                            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-accent transition-all duration-300 hover:w-full"></span>
+                        </a>
+                        <a href="menu.html" class="nav-link text-primary font-medium hover:text-accent transition-colors duration-200 relative">
+                            Menu
+                            <span class="absolute bottom-0 left-0 w-full h-0.5 bg-accent transition-all duration-300"></span>
+                        </a>
+                        <a href="about.html" class="nav-link text-text-secondary font-medium hover:text-accent transition-colors duration-200 relative">
+                            About
+                            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-accent transition-all duration-300 hover:w-full"></span>
+                        </a>
+                        <a href="gallery.html" class="nav-link text-text-secondary font-medium hover:text-accent transition-colors duration-200 relative">
+                            Gallery
+                            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-accent transition-all duration-300 hover:w-full"></span>
+                        </a>
+                        <a href="contact.html" class="nav-link text-text-secondary font-medium hover:text-accent transition-colors duration-200 relative">
+                            Contact
+                            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-accent transition-all duration-300 hover:w-full"></span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-primary hover:text-accent focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white shadow-warm-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="homepage.html" class="block px-3 py-2 text-text-secondary hover:text-accent">Home</a>
+                <a href="menu.html" class="block px-3 py-2 text-primary font-medium">Menu</a>
+                <a href="about.html" class="block px-3 py-2 text-text-secondary hover:text-accent">About</a>
+                <a href="gallery.html" class="block px-3 py-2 text-text-secondary hover:text-accent">Gallery</a>
+                <a href="contact.html" class="block px-3 py-2 text-text-secondary hover:text-accent">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-96 flex items-center justify-center overflow-hidden mt-16">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1697409426520-347bc83126dd" 
+                 alt="Artisanal coffee menu display with various coffee beans and brewing equipment arranged aesthetically" 
+                 class="w-full h-full object-cover"
+                 onerror="this.src='https://images.pexels.com/photos/1251175/pexels-photo-1251175.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;">
+            <div class="absolute inset-0 bg-primary opacity-70"></div>
+        </div>
+
+        <div class="relative z-10 text-center text-white px-4 sm:px-6 lg:px-8">
+            <h1 class="font-headline text-4xl md:text-5xl lg:text-6xl font-bold mb-4" data-aos="fade-up">
+                Our <span class="text-accent">Artisanal</span> Menu
+            </h1>
+            <p class="text-xl md:text-2xl mb-6 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+                Discover handcrafted beverages and culinary delights, each prepared with passion and precision
+            </p>
+        </div>
+    </section>
+
+    <!-- Menu Filters -->
+    <section class="section-padding bg-surface">
+        <div class="container-max">
+            <div class="flex flex-wrap justify-center gap-4 mb-12" data-aos="fade-up">
+                <button class="filter-btn active" data-filter="all">
+                    <i class="fas fa-th-large mr-2"></i>
+                    All Items
+                </button>
+                <button class="filter-btn" data-filter="coffee">
+                    <i class="fas fa-coffee mr-2"></i>
+                    Coffee
+                </button>
+                <button class="filter-btn" data-filter="espresso">
+                    <i class="fas fa-fire mr-2"></i>
+                    Espresso
+                </button>
+                <button class="filter-btn" data-filter="specialty">
+                    <i class="fas fa-star mr-2"></i>
+                    Specialty
+                </button>
+                <button class="filter-btn" data-filter="seasonal">
+                    <i class="fas fa-snowflake mr-2"></i>
+                    Seasonal
+                </button>
+                <button class="filter-btn" data-filter="food">
+                    <i class="fas fa-utensils mr-2"></i>
+                    Food
+                </button>
+            </div>
+
+            <!-- Price Range Filter -->
+            <div class="flex flex-col sm:flex-row items-center justify-between mb-8 p-4 bg-white rounded-xl shadow-warm" data-aos="fade-up" data-aos-delay="200">
+                <div class="flex items-center space-x-4 mb-4 sm:mb-0">
+                    <span class="font-medium text-primary">Price Range:</span>
+                    <div class="flex items-center space-x-2">
+                        <span class="text-sm text-text-secondary">$2</span>
+                        <input type="range" id="price-range" min="2" max="25" value="25" class="w-32">
+                        <span class="text-sm text-text-secondary">$25+</span>
+                    </div>
+                    <span id="price-display" class="font-medium text-accent">Up to $25</span>
+                </div>
+                <button id="reset-filters" class="btn-secondary text-sm">
+                    <i class="fas fa-undo mr-2"></i>
+                    Reset Filters
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Coffee Menu -->
+    <section class="section-padding bg-background">
+        <div class="container-max">
+            <div class="text-center mb-16">
+                <h2 class="font-headline text-3xl md:text-4xl font-bold text-primary mb-4" data-aos="fade-up">
+                    Premium Coffee Selection
+                </h2>
+                <p class="text-lg text-text-secondary max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+                    Each cup is carefully crafted using ethically sourced beans and time-honored brewing techniques
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="menu-grid">
+                <!-- Ethiopian Single Origin -->
+                <div class="menu-item card group cursor-pointer coffee" data-price="8" data-aos="fade-up" data-aos-delay="100">
+                    <div class="relative overflow-hidden rounded-lg mb-4">
+                        <img src="https://images.unsplash.com/photo-1549704723-e4cda980ce78" 
+                             alt="Ethiopian single origin coffee beans with bright, floral characteristics displayed in a rustic wooden bowl" 
+                             class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110"
+                             onerror="this.src='https://images.pixabay.com/photo/2016/11/29/12/54/coffee-1869820_1280.jpg'; this.onerror=null;">
+                        <div class="absolute top-4 right-4">
+                            <span class="bg-accent text-white px-2 py-1 rounded-full text-xs font-medium">Premium</span>
+                        </div>
+                    </div>
+                    <h3 class="font-headline text-xl font-semibold text-primary mb-2">Ethiopian Highlands</h3>
+                    <p class="text-text-secondary mb-3 text-sm">Bright, floral notes with hints of citrus and wine. Complex fruity flavors from the birthplace of coffee.</p>
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-2xl font-bold text-accent">$8.50</span>
+                        <div class="flex items-center text-warning">
+                            <i class="fas fa-star text-xs"></i>
+                            <i class="fas fa-star text-xs"></i>
+                            <i class="fas fa-star text-xs"></i>
+                            <i class="fas fa-star text-xs"></i>
+                            <i class="fas fa-star text-xs"></i>
+                            <span class="ml-1 text-xs text-text-secondary">(4.9)</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center text-xs text-text-secondary">
+                            <i class="fas fa-leaf mr-1 text-success"></i>
+                            <span>Organic</span>
+                        </div>
+                        <button class="btn-primary text-sm py-2 px-4" onclick="openCustomization('Ethiopian Highlands', 8.50)">
+                            Customize
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Colombian Supremo -->
+                <div class="menu-item card group cursor-pointer coffee" data-price="7" data-aos="fade-up" data-aos-delay="200">
+                    <div class="relative overflow-hidden rounded-lg mb-4">
+                        <img src="https://images.unsplash.com/photo-1593391171826-3fa13cec729b" 
+                             alt="Colombian Supremo coffee beans from mountain plantations with rich, full-bodied characteristics" 
+                             class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110"
+                             onerror="this.src='https://images.pexels.com/photos/1695052/pexels-photo-1695052.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;">
+                        <div class="absolute top-4 right-4">
+                            <span class="bg-success text-white px-2 py-1 rounded-full text-xs font-medium">Fair Trade</span>
+                        </div>
+                    </div>
+                    <h3 class="font-headline text-xl font-semibold text-primary mb-2">Colombian Supremo</h3>
+                    <p class="text-text-secondary mb-3 text-sm">Rich, full-bodied with caramel sweetness and nutty undertones. Perfect balance of acidity and smoothness.</p>
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-2xl font-bold text-accent">$7.25</span>
+                        <div class="flex items-center text-warning">
+                            <i class="fas fa-star text-xs"></i>
+                            <i class="fas fa-star text-xs"></i>
+                            <i class="fas fa-star text-xs"></i>
+                            <i class="fas fa-star text-xs"></i>
+                            <i class="fas fa-star text-xs"></i>
+                            <span class="ml-1 text-xs text-text-secondary">(4.8)</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center text-xs text-text-secondary">
+                            <i class="fas fa-award mr-1 text-accent"></i>
+                            <span>Award Winner</span>
+                        </div>
+                        <button class="btn-primary text-sm py-2 px-4" onclick="openCustomization('Colombian Supremo', 7.25)">
+                            Customize
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Blue Mountain Reserve -->
+                <div class="menu-item card group cursor-pointer coffee" data-price="12" data-aos="fade-up" data-aos-delay="300">
+                    <div class="relative overflow-hidden rounded-lg mb-4">
+                        <img src="https://images.unsplash.com/photo-1609168172023-d79bca807b55" 
+                             alt="Jamaican Blue Mountain coffee beans showcasing the world's most sought-after coffee variety" 
+                             class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110"
+                             onerror="this.src='https://images.pixabay.com/photo/2017/09/04/18/39/coffee-2714970_1280.jpg'; this.onerror=null;">
+                        <div class="absolute top-4 right-4">
+                            <span class="bg-error text-white px-2 py-1 rounded-full text-xs font-medium">Limited</span>
+                        </div>
+                    </div>
+                    <h3 class="font-headline text-xl font-semibold text-primary mb-2">Blue Mountain Reserve</h3>
+                    <p class="text-text-secondary mb-3 text-sm">Mild, smooth, and exceptionally well-balanced. One of the world's most sought-after coffee varieties.</p>
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-2xl font-bold text-accent">$12.75</span>
+                        <div class="flex items-center text-warning">
+                            <i class="fas fa-star text-xs"></i>
+                            <i class="fas fa-star text-xs"></i>
+                            <i class="fas fa-star text-xs"></i>
+                            <i class="fas fa-star text-xs"></i>
+                            <i class="fas fa-star text-xs"></i>
+                            <span class="ml-1 text-xs text-text-secondary">(5.0)</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center text-xs text-text-secondary">
+                            <i class="fas fa-crown mr-1 text-accent"></i>
+                            <span>Exclusive</span>
+                        </div>
+                        <button class="btn-primary text-sm py-2 px-4" onclick="openCustomization('Blue Mountain Reserve', 12.75)">
+                            Customize
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Classic Espresso -->
+                <div class="menu-item card group cursor-pointer espresso" data-price="4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="relative overflow-hidden rounded-lg mb-4">
+                        <img src="https://images.unsplash.com/photo-1517789439268-317443633a0b" 
+                             alt="Perfect espresso shot with golden crema in a traditional white ceramic cup" 
+                             class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110"
+                             onerror="this.src='https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;">
+                    </div>
+                    <h3 class="font-headline text-xl font-semibold text-primary mb-2">Classic Espresso</h3>
+                    <p class="text-text-secondary mb-3 text-sm">Rich, concentrated coffee with a perfect golden crema. The foundation of all great coffee drinks.</p>
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-2xl font-bold text-accent">$4.25</span>
+                        <div class="flex items-center text-warning">
+                            <i class="fas fa-star text-xs"></i>
+                            <i class="fas fa-star text-xs"></i>
+                            <i class="fas fa-star text-xs"></i>
+                            <i class="fas fa-star text-xs"></i>
+                            <i class="fas fa-star text-xs"></i>
+                            <span class="ml-1 text-xs text-text-secondary">(4.7)</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center text-xs text-text-secondary">
+                            <i class="fas fa-bolt mr-1 text-warning"></i>
+                            <span>Strong</span>
+                        </div>
+                        <button class="btn-primary text-sm py-2 px-4" onclick="openCustomization('Classic Espresso', 4.25)">
+                            Customize
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Cappuccino -->
+                <div class="menu-item card group cursor-pointer espresso" data-price="6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="relative overflow-hidden rounded-lg mb-4">
+                        <img src="https://images.unsplash.com/photo-1630419935523-c3ac4139cb3e" 
+                             alt="Artisanal cappuccino with perfect milk foam art in a ceramic cup on wooden table" 
+                             class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110"
+                             onerror="this.src='https://images.pixabay.com/photo/2017/05/12/08/29/coffee-2306471_1280.jpg'; this.onerror=null;">
+                    </div>
+                    <h3 class="font-headline text-xl font-semibold text-primary mb-2">Artisan Cappuccino</h3>
+                    <p class="text-text-secondary mb-3 text-sm">Perfect balance of espresso, steamed milk, and velvety foam. Topped with beautiful latte art.</p>
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-2xl font-bold text-accent">$6.50</span>
+                        <div class="flex items-center text-warning">
+                            <i class="fas fa-star text-xs"></i>
+                            <i class="fas fa-star text-xs"></i>
+                            <i class="fas fa-star text-xs"></i>
+                            <i class="fas fa-star text-xs"></i>
+                            <i class="fas fa-star text-xs"></i>
+                            <span class="ml-1 text-xs text-text-secondary">(4.9)</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center text-xs text-text-secondary">
+                            <i class="fas fa-heart mr-1 text-error"></i>
+                            <span>Popular</span>
+                        </div>
+                        <button class="btn-primary text-sm py-2 px-4" onclick="openCustomization('Artisan Cappuccino', 6.50)">
+                            Customize
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Signature Latte -->
+                <div class="menu-item card group cursor-pointer specialty" data-price="7" data-aos="fade-up" data-aos-delay="300">
+                    <div class="relative overflow-hidden rounded-lg mb-4">
+                        <img src="https://images.unsplash.com/photo-1519681057761-c3765dfb41cf" 
+                             alt="Signature latte with intricate foam art and specialty flavor profile in elegant glass mug" 
+                             class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110"
+                             onerror="this.src='https://images.pexels.com/photos/324028/pexels-photo-324028.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;">
+                        <div class="absolute top-4 right-4">
+                            <span class="bg-primary text-white px-2 py-1 rounded-full text-xs font-medium">Signature</span>
+                        </div>
+                    </div>
+                    <h3 class="font-headline text-xl font-semibold text-primary mb-2">ShivCafe Signature Latte</h3>
+                    <p class="text-text-secondary mb-3 text-sm">Our house specialty with Madagascar vanilla, Ceylon cinnamon, and a touch of golden honey.</p>
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-2xl font-bold text-accent">$7.75</span>
+                        <div class="flex items-center text-warning">
+                            <i class="fas fa-star text-xs"></i>
+                            <i class="fas fa-star text-xs"></i>
+                            <i class="fas fa-star text-xs"></i>
+                            <i class="fas fa-star text-xs"></i>
+                            <i class="fas fa-star text-xs"></i>
+                            <span class="ml-1 text-xs text-text-secondary">(4.9)</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center text-xs text-text-secondary">
+                            <i class="fas fa-gem mr-1 text-accent"></i>
+                            <span>House Special</span>
+                        </div>
+                        <button class="btn-primary text-sm py-2 px-4" onclick="openCustomization('ShivCafe Signature Latte', 7.75)">
+                            Customize
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Winter Spiced Mocha -->
+                <div class="menu-item card group cursor-pointer seasonal" data-price="8" data-aos="fade-up" data-aos-delay="100">
+                    <div class="relative overflow-hidden rounded-lg mb-4">
+                        <img src="https://images.unsplash.com/photo-1505801045160-cf907cca55ad" 
+                             alt="Winter spiced mocha with whipped cream, cinnamon stick, and seasonal spices in cozy setting" 
+                             class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110"
+                             onerror="this.src='https://images.pexels.com/photos/1251175/pexels-photo-1251175.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;">
+                        <div class="absolute top-4 right-4">
+                            <span class="bg-warning text-white px-2 py-1 rounded-full text-xs font-medium">Seasonal</span>
+                        </div>
+                    </div>
+                    <h3 class="font-headline text-xl font-semibold text-primary mb-2">Winter Spiced Mocha</h3>
+                    <p class="text-text-secondary mb-3 text-sm">Rich chocolate and espresso blend with warming spices, topped with whipped cream and cinnamon.</p>
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-2xl font-bold text-accent">$8.25</span>
+                        <div class="flex items-center text-warning">
+                            <i class="fas fa-star text-xs"></i>
+                            <i class="fas fa-star text-xs"></i>
+                            <i class="fas fa-star text-xs"></i>
+                            <i class="fas fa-star text-xs"></i>
+                            <i class="fas fa-star text-xs"></i>
+                            <span class="ml-1 text-xs text-text-secondary">(4.8)</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center text-xs text-text-secondary">
+                            <i class="fas fa-snowflake mr-1 text-accent"></i>
+                            <span>Limited Time</span>
+                        </div>
+                        <button class="btn-primary text-sm py-2 px-4" onclick="openCustomization('Winter Spiced Mocha', 8.25)">
+                            Customize
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Peppermint Latte -->
+                <div class="menu-item card group cursor-pointer seasonal" data-price="7" data-aos="fade-up" data-aos-delay="200">
+                    <div class="relative overflow-hidden rounded-lg mb-4">
+                        <img src="https://images.unsplash.com/photo-1640412752158-26660b1018e5" 
+                             alt="Festive peppermint latte with candy cane garnish and holiday-themed presentation" 
+                             class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110"
+                             onerror="this.src='https://images.pixabay.com/photo/2017/12/10/17/40/coffee-3010349_1280.jpg'; this.onerror=null;">
+                        <div class="absolute top-4 right-4">
+                            <span class="bg-error text-white px-2 py-1 rounded-full text-xs font-medium">Holiday</span>
+                        </div>
+                    </div>
+                    <h3 class="font-headline text-xl font-semibold text-primary mb-2">Peppermint Dream Latte</h3>
+                    <p class="text-text-secondary mb-3 text-sm">Festive blend of espresso, steamed milk, and natural peppermint. Topped with whipped cream and crushed candy cane.</p>
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-2xl font-bold text-accent">$7.50</span>
+                        <div class="flex items-center text-warning">
+                            <i class="fas fa-star text-xs"></i>
+                            <i class="fas fa-star text-xs"></i>
+                            <i class="fas fa-star text-xs"></i>
+                            <i class="fas fa-star text-xs"></i>
+                            <i class="fas fa-star text-xs"></i>
+                            <span class="ml-1 text-xs text-text-secondary">(4.7)</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center text-xs text-text-secondary">
+                            <i class="fas fa-candy-cane mr-1 text-error"></i>
+                            <span>Festive</span>
+                        </div>
+                        <button class="btn-primary text-sm py-2 px-4" onclick="openCustomization('Peppermint Dream Latte', 7.50)">
+                            Customize
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Artisan Croissant -->
+                <div class="menu-item card group cursor-pointer food" data-price="5" data-aos="fade-up" data-aos-delay="300">
+                    <div class="relative overflow-hidden rounded-lg mb-4">
+                        <img src="https://images.unsplash.com/photo-1720705033886-ce38dd0d0765" 
+                             alt="Fresh buttery croissants with golden, flaky layers displayed on rustic wooden board" 
+                             class="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110"
+                             onerror="this.src='https://images.pexels.com/photos/1775043/pexels-photo-1775043.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;">
+                        <div class="absolute top-4 right-4">
+                            <span class="bg-success text-white px-2 py-1 rounded-full text-xs font-medium">Fresh</span>
+                        </div>
+                    </div>
+                    <h3 class="font-headline text-xl font-semibold text-primary mb-2">Artisan Butter Croissant</h3>
+                    <p class="text-text-secondary mb-3 text-sm">Flaky, buttery pastry made fresh daily with French techniques. Perfect companion to your morning coffee.</p>
+                    <div class="flex items-center justify-between mb-3">
+                        <span class="text-2xl font-bold text-accent">$5.25</span>
+                        <div class="flex items-center text-warning">
+                            <i class="fas fa-star text-xs"></i>
+                            <i class="fas fa-star text-xs"></i>
+                            <i class="fas fa-star text-xs"></i>
+                            <i class="fas fa-star text-xs"></i>
+                            <i class="fas fa-star text-xs"></i>
+                            <span class="ml-1 text-xs text-text-secondary">(4.6)</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center text-xs text-text-secondary">
+                            <i class="fas fa-bread-slice mr-1 text-warning"></i>
+                            <span>Baked Daily</span>
+                        </div>
+                        <button class="btn-primary text-sm py-2 px-4" onclick="addToOrder('Artisan Butter Croissant', 5.25)">
+                            Add to Order
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Load More Button -->
+            <div class="text-center mt-12" data-aos="fade-up">
+                <button id="load-more" class="btn-secondary">
+                    <i class="fas fa-plus mr-2"></i>
+                    Load More Items
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brewing Guide Section -->
+    <section class="section-padding bg-surface">
+        <div class="container-max">
+            <div class="text-center mb-16">
+                <h2 class="font-headline text-3xl md:text-4xl font-bold text-primary mb-4" data-aos="fade-up">
+                    Brewing Guides & Tips
+                </h2>
+                <p class="text-lg text-text-secondary max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+                    Master the art of coffee brewing with our expert guides and professional techniques
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Pour Over Guide -->
+                <div class="card text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 bg-accent-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-tint text-2xl text-accent"></i>
+                    </div>
+                    <h3 class="font-headline text-xl font-semibold text-primary mb-3">Pour Over Method</h3>
+                    <p class="text-text-secondary mb-4">Learn the precise technique for extracting the perfect flavors from your coffee beans.</p>
+                    <button class="btn-primary text-sm" onclick="openBrewingGuide('pour-over')">
+                        <i class="fas fa-play mr-2"></i>
+                        Watch Guide
+                    </button>
+                </div>
+
+                <!-- French Press Guide -->
+                <div class="card text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 bg-accent-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-coffee text-2xl text-accent"></i>
+                    </div>
+                    <h3 class="font-headline text-xl font-semibold text-primary mb-3">French Press</h3>
+                    <p class="text-text-secondary mb-4">Master the immersion brewing method for rich, full-bodied coffee at home.</p>
+                    <button class="btn-primary text-sm" onclick="openBrewingGuide('french-press')">
+                        <i class="fas fa-play mr-2"></i>
+                        Watch Guide
+                    </button>
+                </div>
+
+                <!-- Espresso Guide -->
+                <div class="card text-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-16 h-16 bg-accent-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-fire text-2xl text-accent"></i>
+                    </div>
+                    <h3 class="font-headline text-xl font-semibold text-primary mb-3">Espresso Basics</h3>
+                    <p class="text-text-secondary mb-4">Understand the fundamentals of espresso extraction and milk steaming techniques.</p>
+                    <button class="btn-primary text-sm" onclick="openBrewingGuide('espresso')">
+                        <i class="fas fa-play mr-2"></i>
+                        Watch Guide
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Coffee Preference Quiz -->
+    <section class="section-padding bg-primary text-white">
+        <div class="container-max text-center">
+            <h2 class="font-headline text-3xl md:text-4xl font-bold mb-4" data-aos="fade-up">
+                Find Your Perfect Coffee Match
+            </h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+                Take our personalized quiz to discover coffee recommendations tailored to your taste preferences
+            </p>
+            <button class="btn-accent" onclick="openCoffeeQuiz()" data-aos="fade-up" data-aos-delay="400">
+                <i class="fas fa-magic mr-2"></i>
+                Start Coffee Quiz
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary-900 text-white section-padding">
+        <div class="container-max">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <!-- Brand -->
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-10 h-10 bg-accent rounded-full flex items-center justify-center">
+                            <i class="fas fa-coffee text-white text-lg"></i>
+                        </div>
+                        <span class="font-accent text-2xl font-bold">ShivCafe</span>
+                    </div>
+                    <p class="text-secondary-200 mb-4 max-w-md">
+                        Where every cup tells a story of artisanal excellence, community connection, and the perfect blend of tradition and innovation.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="javascript:void(0)" class="text-secondary-200 hover:text-accent transition-colors">
+                            <i class="fab fa-facebook-f text-xl"></i>
+                        </a>
+                        <a href="javascript:void(0)" class="text-secondary-200 hover:text-accent transition-colors">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="javascript:void(0)" class="text-secondary-200 hover:text-accent transition-colors">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="javascript:void(0)" class="text-secondary-200 hover:text-accent transition-colors">
+                            <i class="fab fa-youtube text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="font-headline text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="homepage.html" class="text-secondary-200 hover:text-accent transition-colors">Home</a></li>
+                        <li><a href="menu.html" class="text-secondary-200 hover:text-accent transition-colors">Menu</a></li>
+                        <li><a href="about.html" class="text-secondary-200 hover:text-accent transition-colors">About Us</a></li>
+                        <li><a href="gallery.html" class="text-secondary-200 hover:text-accent transition-colors">Gallery</a></li>
+                        <li><a href="contact.html" class="text-secondary-200 hover:text-accent transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="font-headline text-lg font-semibold mb-4">Contact Info</h3>
+                    <ul class="space-y-2 text-secondary-200">
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-2 text-accent"></i>
+                            123 Coffee Street, Bean City
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone mr-2 text-accent"></i>
+                            (555) 123-CAFE
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2 text-accent"></i>
+                            hello@shivcafe.com
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-clock mr-2 text-accent"></i>
+                            Mon-Sun: 6AM - 10PM
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Newsletter Signup -->
+            <div class="border-t border-primary-700 pt-8 mb-8">
+                <div class="text-center">
+                    <h3 class="font-headline text-xl font-semibold mb-4">Stay Connected</h3>
+                    <p class="text-secondary-200 mb-4">Subscribe to our newsletter for exclusive offers and coffee insights.</p>
+                    <div class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+                        <input type="email" placeholder="Enter your email" class="input-field flex-1 text-text-primary">
+                        <button class="btn-accent">
+                            <i class="fas fa-paper-plane mr-2"></i>
+                            Subscribe
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="border-t border-primary-700 pt-8 text-center">
+                <p class="text-secondary-200">
+                    © 2025 ShivCafe. All Rights Reserved. | Crafted with passion, served with purpose.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-accent text-white w-12 h-12 rounded-full shadow-warm-lg opacity-0 invisible transition-all duration-300 hover:bg-accent-600 hover:scale-110 z-50">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Customization Modal -->
+    <div id="customization-modal" class="fixed inset-0 bg-black bg-opacity-50 z-90 hidden items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-lg w-full p-6 max-h-96 overflow-y-auto">
+            <div class="flex items-center justify-between mb-6">
+                <h3 class="font-headline text-2xl font-bold text-primary" id="modal-title">Customize Your Order</h3>
+                <button onclick="closeCustomization()" class="text-text-secondary hover:text-primary">
+                    <i class="fas fa-times text-xl"></i>
+                </button>
+            </div>
+            
+            <div id="customization-content">
+                <!-- Size Selection -->
+                <div class="mb-6">
+                    <h4 class="font-semibold text-primary mb-3">Size</h4>
+                    <div class="grid grid-cols-3 gap-2">
+                        <button class="size-option p-3 border border-secondary-300 rounded-lg hover:bg-secondary-50 transition-colors text-center" data-size="small" data-price="0">
+                            <div class="font-medium">Small</div>
+                            <div class="text-xs text-text-secondary">8oz</div>
+                        </button>
+                        <button class="size-option p-3 border border-secondary-300 rounded-lg hover:bg-secondary-50 transition-colors text-center active" data-size="medium" data-price="0">
+                            <div class="font-medium">Medium</div>
+                            <div class="text-xs text-text-secondary">12oz</div>
+                        </button>
+                        <button class="size-option p-3 border border-secondary-300 rounded-lg hover:bg-secondary-50 transition-colors text-center" data-size="large" data-price="1.50">
+                            <div class="font-medium">Large</div>
+                            <div class="text-xs text-text-secondary">16oz (+$1.50)</div>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Milk Options -->
+                <div class="mb-6">
+                    <h4 class="font-semibold text-primary mb-3">Milk Choice</h4>
+                    <div class="space-y-2">
+                        <label class="flex items-center">
+                            <input type="radio" name="milk" value="whole" class="mr-2" checked>
+                            <span>Whole Milk</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="radio" name="milk" value="skim" class="mr-2">
+                            <span>Skim Milk</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="radio" name="milk" value="oat" class="mr-2">
+                            <span>Oat Milk (+$0.75)</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="radio" name="milk" value="almond" class="mr-2">
+                            <span>Almond Milk (+$0.50)</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Extras -->
+                <div class="mb-6">
+                    <h4 class="font-semibold text-primary mb-3">Extras</h4>
+                    <div class="space-y-2">
+                        <label class="flex items-center">
+                            <input type="checkbox" class="mr-2">
+                            <span>Extra Shot (+$1.25)</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="checkbox" class="mr-2">
+                            <span>Decaf</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="checkbox" class="mr-2">
+                            <span>Extra Hot</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="checkbox" class="mr-2">
+                            <span>Whipped Cream (+$0.50)</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="flex items-center justify-between pt-4 border-t border-secondary-200">
+                <div class="text-2xl font-bold text-accent" id="modal-price">$0.00</div>
+                <div class="flex gap-3">
+                    <button onclick="closeCustomization()" class="btn-secondary">Cancel</button>
+                    <button class="btn-primary" onclick="addCustomizedToOrder()">
+                        <i class="fas fa-plus mr-2"></i>
+                        Add to Order
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Coffee Quiz Modal -->
+    <div id="quiz-modal" class="fixed inset-0 bg-black bg-opacity-50 z-90 hidden items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-md w-full p-6">
+            <div class="text-center mb-6">
+                <h3 class="font-headline text-2xl font-bold text-primary mb-2">Find Your Perfect Coffee</h3>
+                <p class="text-text-secondary">Answer a few questions to get personalized recommendations.</p>
+            </div>
+            
+            <div id="quiz-content">
+                <div class="quiz-question active">
+                    <h4 class="font-semibold text-primary mb-4">How do you prefer your coffee strength?</h4>
+                    <div class="space-y-2">
+                        <button class="quiz-option w-full text-left p-3 border border-secondary-300 rounded-lg hover:bg-secondary-50 transition-colors" data-value="mild">
+                            <i class="fas fa-coffee mr-2 text-accent"></i>
+                            Mild & Smooth
+                        </button>
+                        <button class="quiz-option w-full text-left p-3 border border-secondary-300 rounded-lg hover:bg-secondary-50 transition-colors" data-value="medium">
+                            <i class="fas fa-coffee mr-2 text-accent"></i>
+                            Medium Strength
+                        </button>
+                        <button class="quiz-option w-full text-left p-3 border border-secondary-300 rounded-lg hover:bg-secondary-50 transition-colors" data-value="strong">
+                            <i class="fas fa-coffee mr-2 text-accent"></i>
+                            Bold & Strong
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="flex justify-between mt-6">
+                <button onclick="closeCoffeeQuiz()" class="btn-secondary">
+                    <i class="fas fa-times mr-2"></i>
+                    Close
+                </button>
+                <button class="btn-primary" onclick="getRecommendations()">
+                    <i class="fas fa-arrow-right mr-2"></i>
+                    Get Recommendations
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Loading Spinner
+        window.addEventListener('load', function() {
+            setTimeout(() => {
+                document.getElementById('loading-spinner').style.opacity = '0';
+                setTimeout(() => {
+                    document.getElementById('loading-spinner').style.display = 'none';
+                }, 300);
+            }, 1000);
+        });
+
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            offset: 100
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-white', 'shadow-warm-lg');
+                navbar.classList.remove('bg-transparent');
+            } else {
+                navbar.classList.remove('bg-white', 'shadow-warm-lg');
+                navbar.classList.add('bg-transparent');
+            }
+        });
+
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Filter functionality
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                // Update active filter
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                
+                const filter = this.dataset.filter;
+                const items = document.querySelectorAll('.menu-item');
+                
+                items.forEach(item => {
+                    if (filter === 'all' || item.classList.contains(filter)) {
+                        item.style.display = 'block';
+                        setTimeout(() => {
+                            item.style.opacity = '1';
+                            item.style.transform = 'translateY(0)';
+                        }, 100);
+                    } else {
+                        item.style.opacity = '0';
+                        item.style.transform = 'translateY(20px)';
+                        setTimeout(() => {
+                            item.style.display = 'none';
+                        }, 300);
+                    }
+                });
+            });
+        });
+
+        // Price range filter
+        const priceRange = document.getElementById('price-range');
+        const priceDisplay = document.getElementById('price-display');
+        
+        priceRange.addEventListener('input', function() {
+            const maxPrice = this.value;
+            priceDisplay.textContent = `Up to $${maxPrice}`;
+            
+            const items = document.querySelectorAll('.menu-item');
+            items.forEach(item => {
+                const itemPrice = parseFloat(item.dataset.price);
+                if (itemPrice <= maxPrice) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+
+        // Reset filters
+        document.getElementById('reset-filters').addEventListener('click', function() {
+            document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+            document.querySelector('.filter-btn[data-filter="all"]').classList.add('active');
+            priceRange.value = 25;
+            priceDisplay.textContent = 'Up to $25';
+            
+            document.querySelectorAll('.menu-item').forEach(item => {
+                item.style.display = 'block';
+                item.style.opacity = '1';
+                item.style.transform = 'translateY(0)';
+            });
+        });
+
+        // Back to top button
+        const backToTopButton = document.getElementById('back-to-top');
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.add('opacity-0', 'invisible');
+                backToTopButton.classList.remove('opacity-100', 'visible');
+            }
+        });
+
+        backToTopButton.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Customization Modal Functions
+        let currentItem = {};
+
+        function openCustomization(name, price) {
+            currentItem = { name, basePrice: price };
+            document.getElementById('modal-title').textContent = `Customize ${name}`;
+            document.getElementById('modal-price').textContent = `$${price.toFixed(2)}`;
+            document.getElementById('customization-modal').classList.remove('hidden');
+            document.getElementById('customization-modal').classList.add('flex');
+            updatePrice();
+        }
+
+        function closeCustomization() {
+            document.getElementById('customization-modal').classList.add('hidden');
+            document.getElementById('customization-modal').classList.remove('flex');
+        }
+
+        function updatePrice() {
+            let totalPrice = currentItem.basePrice;
+            
+            // Add size price
+            const activeSize = document.querySelector('.size-option.active');
+            if (activeSize) {
+                totalPrice += parseFloat(activeSize.dataset.price);
+            }
+            
+            // Add milk price
+            const selectedMilk = document.querySelector('input[name="milk"]:checked');
+            if (selectedMilk && selectedMilk.value === 'oat') {
+                totalPrice += 0.75;
+            } else if (selectedMilk && selectedMilk.value === 'almond') {
+                totalPrice += 0.50;
+            }
+            
+            // Add extras
+            document.querySelectorAll('input[type="checkbox"]:checked').forEach(checkbox => {
+                const label = checkbox.parentElement.textContent;
+                if (label.includes('+$1.25')) totalPrice += 1.25;
+                if (label.includes('+$0.50')) totalPrice += 0.50;
+            });
+            
+            document.getElementById('modal-price').textContent = `$${totalPrice.toFixed(2)}`;
+        }
+
+        // Size option selection
+        document.querySelectorAll('.size-option').forEach(option => {
+            option.addEventListener('click', function() {
+                document.querySelectorAll('.size-option').forEach(opt => opt.classList.remove('active'));
+                this.classList.add('active');
+                updatePrice();
+            });
+        });
+
+        // Update price when options change
+        document.addEventListener('change', function(e) {
+            if (e.target.type === 'radio' || e.target.type === 'checkbox') {
+                updatePrice();
+            }
+        });
+
+        function addCustomizedToOrder() {
+            // Here you would typically add the item to a cart or order system
+            alert(`${currentItem.name} added to your order!`);
+            closeCustomization();
+        }
+
+        function addToOrder(name, price) {
+            alert(`${name} added to your order for $${price.toFixed(2)}!`);
+        }
+
+        // Coffee Quiz Functions
+        function openCoffeeQuiz() {
+            document.getElementById('quiz-modal').classList.remove('hidden');
+            document.getElementById('quiz-modal').classList.add('flex');
+        }
+
+        function closeCoffeeQuiz() {
+            document.getElementById('quiz-modal').classList.add('hidden');
+            document.getElementById('quiz-modal').classList.remove('flex');
+        }
+
+        function getRecommendations() {
+            const selectedOption = document.querySelector('.quiz-option.bg-accent');
+            if (selectedOption) {
+                const preference = selectedOption.dataset.value;
+                let recommendation = '';
+                
+                switch(preference) {
+                    case 'mild':
+                        recommendation = 'We recommend our Blue Mountain Reserve or Colombian Supremo!';
+                        break;
+                    case 'medium':
+                        recommendation = 'Try our Ethiopian Highlands or Signature Latte!';
+                        break;
+                    case 'strong':
+                        recommendation = 'Perfect for our Classic Espresso or Winter Spiced Mocha!';
+                        break;
+                }
+                
+                alert(recommendation);
+            }
+            closeCoffeeQuiz();
+        }
+
+        // Quiz option selection
+        document.querySelectorAll('.quiz-option').forEach(option => {
+            option.addEventListener('click', function() {
+                document.querySelectorAll('.quiz-option').forEach(opt => {
+                    opt.classList.remove('bg-accent', 'text-white');
+                    opt.classList.add('hover:bg-secondary-50');
+                });
+                this.classList.add('bg-accent', 'text-white');
+                this.classList.remove('hover:bg-secondary-50');
+            });
+        });
+
+        // Brewing Guide Functions
+        function openBrewingGuide(type) {
+            let guideContent = '';
+            switch(type) {
+                case 'pour-over':
+                    guideContent = 'Pour Over brewing creates a clean, bright cup by slowly pouring hot water over coffee grounds in a circular motion.';
+                    break;
+                case 'french-press':
+                    guideContent = 'French Press uses immersion brewing for 4 minutes to create a rich, full-bodied coffee with natural oils.';
+                    break;
+                case 'espresso':
+                    guideContent = 'Espresso requires precise timing and pressure to extract concentrated coffee with a golden crema layer.';
+                    break;
+            }
+            alert(`${guideContent}\n\nVisit our café for hands-on brewing workshops!`);
+        }
+
+        // Load More functionality
+        document.getElementById('load-more').addEventListener('click', function() {
+            // This would typically load more menu items from an API
+            alert('More delicious items coming soon! Check back for seasonal additions.');
+        });
+
+        // Close modals when clicking outside
+        document.getElementById('customization-modal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeCustomization();
+            }
+        });
+
+        document.getElementById('quiz-modal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeCoffeeQuiz();
+            }
+        });
+
+        // Add filter button styles
+        const style = document.createElement('style');
+        style.textContent = `
+            .filter-btn {
+                @apply px-4 py-2 rounded-lg font-medium transition-all duration-300 border border-secondary-300 text-text-secondary hover:bg-secondary-50;
+            }
+            .filter-btn.active {
+                @apply bg-accent text-white border-accent shadow-warm;
+            }
+            .size-option.active {
+                @apply bg-accent text-white border-accent;
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+<script id="dhws-dataInjector" src="../public/dhws-data-injector.js"></script>
+</body>
+</html>

@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - ShivCafe | Visual Stories of Coffee Artistry</title>
+    <meta name="description" content="Explore the visual stories of ShivCafe through our curated gallery. Discover coffee artistry, café atmosphere, behind-the-scenes moments, and community experiences.">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fshivcafe8149back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.9"></script>
+  <script type="module" src="https://static.rocket.new/rocket-shot.js?v=0.0.1"></script>
+  </head>
+<body class="bg-background">
+    <!-- Loading Spinner -->
+    <div id="loading-spinner" class="fixed inset-0 bg-primary z-100 flex items-center justify-center">
+        <div class="text-center">
+            <div class="animate-spin rounded-full h-16 w-16 border-4 border-accent border-t-transparent mb-4"></div>
+            <p class="text-white font-accent text-xl">Loading Visual Stories...</p>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300">
+        <div class="container-max px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <a href="homepage.html" class="flex items-center space-x-2">
+                        <div class="w-10 h-10 bg-accent rounded-full flex items-center justify-center">
+                            <i class="fas fa-coffee text-white text-lg"></i>
+                        </div>
+                        <span class="font-accent text-2xl font-bold text-primary">ShivCafe</span>
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="homepage.html" class="nav-link text-text-secondary font-medium hover:text-accent transition-colors duration-200 relative">
+                            Home
+                            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-accent transition-all duration-300 hover:w-full"></span>
+                        </a>
+                        <a href="menu.html" class="nav-link text-text-secondary font-medium hover:text-accent transition-colors duration-200 relative">
+                            Menu
+                            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-accent transition-all duration-300 hover:w-full"></span>
+                        </a>
+                        <a href="about.html" class="nav-link text-text-secondary font-medium hover:text-accent transition-colors duration-200 relative">
+                            About
+                            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-accent transition-all duration-300 hover:w-full"></span>
+                        </a>
+                        <a href="gallery.html" class="nav-link text-primary font-medium hover:text-accent transition-colors duration-200 relative">
+                            Gallery
+                            <span class="absolute bottom-0 left-0 w-full h-0.5 bg-accent transition-all duration-300"></span>
+                        </a>
+                        <a href="contact.html" class="nav-link text-text-secondary font-medium hover:text-accent transition-colors duration-200 relative">
+                            Contact
+                            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-accent transition-all duration-300 hover:w-full"></span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-primary hover:text-accent focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white shadow-warm-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="homepage.html" class="block px-3 py-2 text-text-secondary hover:text-accent">Home</a>
+                <a href="menu.html" class="block px-3 py-2 text-text-secondary hover:text-accent">Menu</a>
+                <a href="about.html" class="block px-3 py-2 text-text-secondary hover:text-accent">About</a>
+                <a href="gallery.html" class="block px-3 py-2 text-primary font-medium">Gallery</a>
+                <a href="contact.html" class="block px-3 py-2 text-text-secondary hover:text-accent">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <!-- Background Image -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1642776820905-a1d1c70e9fef" 
+                 alt="Artistic overhead view of coffee cups, latte art, and coffee beans arranged on rustic wooden table" 
+                 class="w-full h-full object-cover"
+                 onerror="this.src='https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;">
+            <div class="absolute inset-0 bg-primary opacity-70"></div>
+        </div>
+
+        <!-- Hero Content -->
+        <div class="relative z-10 text-center text-white px-4 sm:px-6 lg:px-8">
+            <h1 class="font-headline text-4xl md:text-6xl lg:text-hero font-bold mb-6" data-aos="fade-up">
+                Visual Stories of
+                <span class="text-accent">Coffee Artistry</span>
+            </h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+                Discover the beauty behind every cup, the warmth of our community, and the artistry that defines ShivCafe through our curated visual journey.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center" data-aos="fade-up" data-aos-delay="400">
+                <button onclick="scrollToGallery()" class="btn-accent inline-flex items-center">
+                    <i class="fas fa-images mr-2"></i>
+                    Explore Gallery
+                </button>
+                <button onclick="openSubmissionModal()" class="btn-secondary inline-flex items-center">
+                    <i class="fas fa-camera mr-2"></i>
+                    Share Your Moment
+                </button>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <i class="fas fa-chevron-down text-white text-2xl"></i>
+        </div>
+    </section>
+
+    <!-- Gallery Filter Section -->
+    <section id="gallery-section" class="section-padding bg-surface">
+        <div class="container-max">
+            <!-- Section Header -->
+            <div class="text-center mb-16">
+                <h2 class="font-headline text-3xl md:text-4xl font-bold text-primary mb-4" data-aos="fade-up">
+                    Our Visual Journey
+                </h2>
+                <p class="text-lg text-text-secondary max-w-2xl mx-auto mb-8" data-aos="fade-up" data-aos-delay="200">
+                    Every image tells a story of passion, craftsmanship, and community. Explore the moments that make ShivCafe special.
+                </p>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="flex flex-wrap justify-center gap-4 mb-12" data-aos="fade-up" data-aos-delay="300">
+                <button class="filter-btn active" data-filter="all">
+                    <i class="fas fa-th mr-2"></i>
+                    All Photos
+                </button>
+                <button class="filter-btn" data-filter="coffee-art">
+                    <i class="fas fa-palette mr-2"></i>
+                    Coffee Art
+                </button>
+                <button class="filter-btn" data-filter="atmosphere">
+                    <i class="fas fa-home mr-2"></i>
+                    Atmosphere
+                </button>
+                <button class="filter-btn" data-filter="events">
+                    <i class="fas fa-calendar mr-2"></i>
+                    Events
+                </button>
+                <button class="filter-btn" data-filter="behind-scenes">
+                    <i class="fas fa-cog mr-2"></i>
+                    Behind the Scenes
+                </button>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div id="gallery-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                <!-- Coffee Art Images -->
+                <div class="gallery-item coffee-art" data-aos="fade-up" data-aos-delay="100">
+                    <div class="relative overflow-hidden rounded-xl group cursor-pointer">
+                        <img src="https://images.unsplash.com/photo-1730719737054-2cfe909f55a7" 
+                             alt="Intricate latte art featuring a detailed rosetta pattern in creamy foam on dark espresso" 
+                             class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+                             onclick="openLightbox(this)"
+                             onerror="this.src='https://images.pixabay.com/photo/2016/11/29/12/54/coffee-1869820_1280.jpg'; this.onerror=null;">
+                        <div class="absolute inset-0 bg-primary opacity-0 group-hover:opacity-60 transition-opacity duration-300 flex items-center justify-center">
+                            <i class="fas fa-expand text-white text-2xl"></i>
+                        </div>
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <p class="text-white font-medium">Perfect Rosetta Latte Art</p>
+                            <p class="text-secondary-200 text-sm">Crafted by Master Barista Elena</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item coffee-art" data-aos="fade-up" data-aos-delay="200">
+                    <div class="relative overflow-hidden rounded-xl group cursor-pointer">
+                        <img src="https://images.unsplash.com/photo-1514310807142-4d5133bf3d4f" 
+                             alt="Heart-shaped latte art in white ceramic cup surrounded by coffee beans on wooden surface" 
+                             class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+                             onclick="openLightbox(this)"
+                             onerror="this.src='https://images.pexels.com/photos/1251175/pexels-photo-1251175.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;">
+                        <div class="absolute inset-0 bg-primary opacity-0 group-hover:opacity-60 transition-opacity duration-300 flex items-center justify-center">
+                            <i class="fas fa-expand text-white text-2xl"></i>
+                        </div>
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <p class="text-white font-medium">Love in Every Cup</p>
+                            <p class="text-secondary-200 text-sm">Heart Latte Art Special</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item coffee-art" data-aos="fade-up" data-aos-delay="300">
+                    <div class="relative overflow-hidden rounded-xl group cursor-pointer">
+                        <img src="https://images.unsplash.com/photo-1706511636869-39d79a5892da" 
+                             alt="Multiple coffee cups with various latte art designs including tulips and leaves arranged artistically" 
+                             class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+                             onclick="openLightbox(this)"
+                             onerror="this.src='https://images.pixabay.com/photo/2017/09/04/18/39/coffee-2714970_1280.jpg'; this.onerror=null;">
+                        <div class="absolute inset-0 bg-primary opacity-0 group-hover:opacity-60 transition-opacity duration-300 flex items-center justify-center">
+                            <i class="fas fa-expand text-white text-2xl"></i>
+                        </div>
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <p class="text-white font-medium">Artistry Collection</p>
+                            <p class="text-secondary-200 text-sm">Various Latte Art Styles</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Atmosphere Images -->
+                <div class="gallery-item atmosphere" data-aos="fade-up" data-aos-delay="100">
+                    <div class="relative overflow-hidden rounded-xl group cursor-pointer">
+                        <img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814" 
+                             alt="Cozy café interior with warm lighting, wooden tables, comfortable seating, and customers enjoying coffee" 
+                             class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+                             onclick="openLightbox(this)"
+                             onerror="this.src='https://images.pexels.com/photos/1695052/pexels-photo-1695052.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;">
+                        <div class="absolute inset-0 bg-primary opacity-0 group-hover:opacity-60 transition-opacity duration-300 flex items-center justify-center">
+                            <i class="fas fa-expand text-white text-2xl"></i>
+                        </div>
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <p class="text-white font-medium">Warm & Welcoming</p>
+                            <p class="text-secondary-200 text-sm">Main Seating Area</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item atmosphere" data-aos="fade-up" data-aos-delay="200">
+                    <div class="relative overflow-hidden rounded-xl group cursor-pointer">
+                        <img src="https://images.unsplash.com/photo-1460776960860-7adc30a4e69d" 
+                             alt="Rustic café corner with exposed brick walls, vintage furniture, and soft natural lighting from large windows" 
+                             class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+                             onclick="openLightbox(this)"
+                             onerror="this.src='https://images.pixabay.com/photo/2016/11/21/12/42/beard-1845166_1280.jpg'; this.onerror=null;">
+                        <div class="absolute inset-0 bg-primary opacity-0 group-hover:opacity-60 transition-opacity duration-300 flex items-center justify-center">
+                            <i class="fas fa-expand text-white text-2xl"></i>
+                        </div>
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <p class="text-white font-medium">Rustic Charm</p>
+                            <p class="text-secondary-200 text-sm">Cozy Corner Seating</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item atmosphere" data-aos="fade-up" data-aos-delay="300">
+                    <div class="relative overflow-hidden rounded-xl group cursor-pointer">
+                        <img src="https://images.unsplash.com/photo-1686367387286-7256efe961a0" 
+                             alt="Outdoor café terrace with comfortable seating, plants, and string lights creating intimate evening ambiance" 
+                             class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+                             onclick="openLightbox(this)"
+                             onerror="this.src='https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;">
+                        <div class="absolute inset-0 bg-primary opacity-0 group-hover:opacity-60 transition-opacity duration-300 flex items-center justify-center">
+                            <i class="fas fa-expand text-white text-2xl"></i>
+                        </div>
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <p class="text-white font-medium">Al Fresco Dining</p>
+                            <p class="text-secondary-200 text-sm">Outdoor Terrace</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Events Images -->
+                <div class="gallery-item events" data-aos="fade-up" data-aos-delay="100">
+                    <div class="relative overflow-hidden rounded-xl group cursor-pointer">
+                        <img src="https://images.unsplash.com/photo-1688069703072-95d338a22eb6" 
+                             alt="Live acoustic music performance in café with guitarist on small stage and engaged audience enjoying coffee" 
+                             class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+                             onclick="openLightbox(this)"
+                             onerror="this.src='https://images.pixabay.com/photo/2017/06/26/02/47/man-2442565_1280.jpg'; this.onerror=null;">
+                        <div class="absolute inset-0 bg-primary opacity-0 group-hover:opacity-60 transition-opacity duration-300 flex items-center justify-center">
+                            <i class="fas fa-expand text-white text-2xl"></i>
+                        </div>
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <p class="text-white font-medium">Live Music Night</p>
+                            <p class="text-secondary-200 text-sm">Monthly Acoustic Sessions</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item events" data-aos="fade-up" data-aos-delay="200">
+                    <div class="relative overflow-hidden rounded-xl group cursor-pointer">
+                        <img src="https://images.unsplash.com/photo-1638189957816-ede912fd822f" 
+                             alt="Coffee cupping session with multiple cups arranged on table and participants tasting and evaluating different coffee varieties" 
+                             class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+                             onclick="openLightbox(this)"
+                             onerror="this.src='https://images.pexels.com/photos/1251175/pexels-photo-1251175.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;">
+                        <div class="absolute inset-0 bg-primary opacity-0 group-hover:opacity-60 transition-opacity duration-300 flex items-center justify-center">
+                            <i class="fas fa-expand text-white text-2xl"></i>
+                        </div>
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <p class="text-white font-medium">Coffee Cupping Event</p>
+                            <p class="text-secondary-200 text-sm">Educational Tasting Session</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Behind the Scenes Images -->
+                <div class="gallery-item behind-scenes" data-aos="fade-up" data-aos-delay="100">
+                    <div class="relative overflow-hidden rounded-xl group cursor-pointer">
+                        <img src="https://images.unsplash.com/photo-1596296946279-626747706215" 
+                             alt="Coffee roasting process showing green coffee beans being transformed in industrial roaster with steam and heat" 
+                             class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+                             onclick="openLightbox(this)"
+                             onerror="this.src='https://images.pixabay.com/photo/2017/09/04/18/39/coffee-2714970_1280.jpg'; this.onerror=null;">
+                        <div class="absolute inset-0 bg-primary opacity-0 group-hover:opacity-60 transition-opacity duration-300 flex items-center justify-center">
+                            <i class="fas fa-expand text-white text-2xl"></i>
+                        </div>
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <p class="text-white font-medium">Roasting Process</p>
+                            <p class="text-secondary-200 text-sm">Fresh Bean Transformation</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item behind-scenes" data-aos="fade-up" data-aos-delay="200">
+                    <div class="relative overflow-hidden rounded-xl group cursor-pointer">
+                        <img src="https://images.unsplash.com/photo-1705229708751-944735d7af33" 
+                             alt="Professional barista carefully preparing espresso shot with focused concentration and precise technique" 
+                             class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+                             onclick="openLightbox(this)"
+                             onerror="this.src='https://images.pexels.com/photos/1695052/pexels-photo-1695052.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;">
+                        <div class="absolute inset-0 bg-primary opacity-0 group-hover:opacity-60 transition-opacity duration-300 flex items-center justify-center">
+                            <i class="fas fa-expand text-white text-2xl"></i>
+                        </div>
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <p class="text-white font-medium">Master at Work</p>
+                            <p class="text-secondary-200 text-sm">Precision Brewing</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item behind-scenes" data-aos="fade-up" data-aos-delay="300">
+                    <div class="relative overflow-hidden rounded-xl group cursor-pointer">
+                        <img src="https://images.unsplash.com/photo-1649616551494-eda2e8b6bb5f" 
+                             alt="Coffee bean selection process with hands sorting through various coffee beans on wooden surface" 
+                             class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+                             onclick="openLightbox(this)"
+                             onerror="this.src='https://images.pixabay.com/photo/2016/11/29/12/54/coffee-1869820_1280.jpg'; this.onerror=null;">
+                        <div class="absolute inset-0 bg-primary opacity-0 group-hover:opacity-60 transition-opacity duration-300 flex items-center justify-center">
+                            <i class="fas fa-expand text-white text-2xl"></i>
+                        </div>
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <p class="text-white font-medium">Quality Selection</p>
+                            <p class="text-secondary-200 text-sm">Bean Sorting Process</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Additional Mixed Category Images -->
+                <div class="gallery-item atmosphere" data-aos="fade-up" data-aos-delay="400">
+                    <div class="relative overflow-hidden rounded-xl group cursor-pointer">
+                        <img src="https://images.unsplash.com/photo-1519155031214-e8d583928bf2" 
+                             alt="Customers working on laptops in comfortable café setting with natural lighting and coffee cups nearby" 
+                             class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+                             onclick="openLightbox(this)"
+                             onerror="this.src='https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;">
+                        <div class="absolute inset-0 bg-primary opacity-0 group-hover:opacity-60 transition-opacity duration-300 flex items-center justify-center">
+                            <i class="fas fa-expand text-white text-2xl"></i>
+                        </div>
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <p class="text-white font-medium">Work & Coffee</p>
+                            <p class="text-secondary-200 text-sm">Perfect Remote Office</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item coffee-art" data-aos="fade-up" data-aos-delay="500">
+                    <div class="relative overflow-hidden rounded-xl group cursor-pointer">
+                        <img src="https://images.unsplash.com/photo-1561087213-59c860dd19cd" 
+                             alt="Artistic flat lay of coffee brewing equipment including pour-over dripper, gooseneck kettle, and freshly ground coffee" 
+                             class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+                             onclick="openLightbox(this)"
+                             onerror="this.src='https://images.pixabay.com/photo/2017/06/26/02/47/man-2442565_1280.jpg'; this.onerror=null;">
+                        <div class="absolute inset-0 bg-primary opacity-0 group-hover:opacity-60 transition-opacity duration-300 flex items-center justify-center">
+                            <i class="fas fa-expand text-white text-2xl"></i>
+                        </div>
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <p class="text-white font-medium">Brewing Essentials</p>
+                            <p class="text-secondary-200 text-sm">Pour-Over Setup</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item events" data-aos="fade-up" data-aos-delay="600">
+                    <div class="relative overflow-hidden rounded-xl group cursor-pointer">
+                        <img src="https://images.unsplash.com/photo-1700519141489-5ed17d799796" 
+                             alt="Community gathering event with people socializing over coffee in warm, inviting café atmosphere" 
+                             class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+                             onclick="openLightbox(this)"
+                             onerror="this.src='https://images.pexels.com/photos/1251175/pexels-photo-1251175.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;">
+                        <div class="absolute inset-0 bg-primary opacity-0 group-hover:opacity-60 transition-opacity duration-300 flex items-center justify-center">
+                            <i class="fas fa-expand text-white text-2xl"></i>
+                        </div>
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <p class="text-white font-medium">Community Gathering</p>
+                            <p class="text-secondary-200 text-sm">Weekly Social Hour</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Load More Button -->
+            <div class="text-center mt-12" data-aos="fade-up">
+                <button id="load-more-btn" class="btn-primary">
+                    <i class="fas fa-plus mr-2"></i>
+                    Load More Photos
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- User Generated Content Section -->
+    <section class="section-padding bg-background">
+        <div class="container-max">
+            <div class="text-center mb-16">
+                <h2 class="font-headline text-3xl md:text-4xl font-bold text-primary mb-4" data-aos="fade-up">
+                    Share Your ShivCafe Moments
+                </h2>
+                <p class="text-lg text-text-secondary max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+                    Join our community by sharing your favorite ShivCafe experiences. Tag us on social media or submit your photos directly.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Social Media Integration -->
+                <div class="card text-center" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 bg-accent-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fab fa-instagram text-accent text-2xl"></i>
+                    </div>
+                    <h3 class="font-headline text-xl font-semibold text-primary mb-2">Instagram</h3>
+                    <p class="text-text-secondary mb-4">Tag us @shivcafe in your posts</p>
+                    <a href="javascript:void(0)" class="btn-secondary">
+                        <i class="fab fa-instagram mr-2"></i>
+                        Follow Us
+                    </a>
+                </div>
+
+                <div class="card text-center" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 bg-accent-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fab fa-facebook text-accent text-2xl"></i>
+                    </div>
+                    <h3 class="font-headline text-xl font-semibold text-primary mb-2">Facebook</h3>
+                    <p class="text-text-secondary mb-4">Share your moments on our page</p>
+                    <a href="javascript:void(0)" class="btn-secondary">
+                        <i class="fab fa-facebook mr-2"></i>
+                        Like Page
+                    </a>
+                </div>
+
+                <div class="card text-center" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-16 h-16 bg-accent-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-camera text-accent text-2xl"></i>
+                    </div>
+                    <h3 class="font-headline text-xl font-semibold text-primary mb-2">Submit Photos</h3>
+                    <p class="text-text-secondary mb-4">Upload your favorite café moments</p>
+                    <button onclick="openSubmissionModal()" class="btn-secondary">
+                        <i class="fas fa-upload mr-2"></i>
+                        Upload Photo
+                    </button>
+                </div>
+
+                <div class="card text-center" data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-16 h-16 bg-accent-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-hashtag text-accent text-2xl"></i>
+                    </div>
+                    <h3 class="font-headline text-xl font-semibold text-primary mb-2">Use Hashtags</h3>
+                    <p class="text-text-secondary mb-4">#ShivCafe #CoffeeArt #CafeLife</p>
+                    <button onclick="copyHashtags()" class="btn-secondary">
+                        <i class="fas fa-copy mr-2"></i>
+                        Copy Tags
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary-900 text-white section-padding">
+        <div class="container-max">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <!-- Brand -->
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-10 h-10 bg-accent rounded-full flex items-center justify-center">
+                            <i class="fas fa-coffee text-white text-lg"></i>
+                        </div>
+                        <span class="font-accent text-2xl font-bold">ShivCafe</span>
+                    </div>
+                    <p class="text-secondary-200 mb-4 max-w-md">
+                        Where every cup tells a story of artisanal excellence, community connection, and the perfect blend of tradition and innovation.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="javascript:void(0)" class="text-secondary-200 hover:text-accent transition-colors">
+                            <i class="fab fa-facebook-f text-xl"></i>
+                        </a>
+                        <a href="javascript:void(0)" class="text-secondary-200 hover:text-accent transition-colors">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="javascript:void(0)" class="text-secondary-200 hover:text-accent transition-colors">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="javascript:void(0)" class="text-secondary-200 hover:text-accent transition-colors">
+                            <i class="fab fa-youtube text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="font-headline text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="homepage.html" class="text-secondary-200 hover:text-accent transition-colors">Home</a></li>
+                        <li><a href="menu.html" class="text-secondary-200 hover:text-accent transition-colors">Menu</a></li>
+                        <li><a href="about.html" class="text-secondary-200 hover:text-accent transition-colors">About Us</a></li>
+                        <li><a href="gallery.html" class="text-secondary-200 hover:text-accent transition-colors">Gallery</a></li>
+                        <li><a href="contact.html" class="text-secondary-200 hover:text-accent transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="font-headline text-lg font-semibold mb-4">Contact Info</h3>
+                    <ul class="space-y-2 text-secondary-200">
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-2 text-accent"></i>
+                            123 Coffee Street, Bean City
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone mr-2 text-accent"></i>
+                            (555) 123-CAFE
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2 text-accent"></i>
+                            hello@shivcafe.com
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-clock mr-2 text-accent"></i>
+                            Mon-Sun: 6AM - 10PM
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Newsletter Signup -->
+            <div class="border-t border-primary-700 pt-8 mb-8">
+                <div class="text-center">
+                    <h3 class="font-headline text-xl font-semibold mb-4">Stay Connected</h3>
+                    <p class="text-secondary-200 mb-4">Subscribe to our newsletter for exclusive offers and coffee insights.</p>
+                    <div class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+                        <input type="email" placeholder="Enter your email" class="input-field flex-1 text-text-primary">
+                        <button class="btn-accent">
+                            <i class="fas fa-paper-plane mr-2"></i>
+                            Subscribe
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="border-t border-primary-700 pt-8 text-center">
+                <p class="text-secondary-200">
+                    © 2025 ShivCafe. All Rights Reserved. | Crafted with passion, served with purpose.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-accent text-white w-12 h-12 rounded-full shadow-warm-lg opacity-0 invisible transition-all duration-300 hover:bg-accent-600 hover:scale-110 z-50">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox-modal" class="fixed inset-0 bg-black bg-opacity-90 z-90 hidden items-center justify-center p-4">
+        <div class="relative max-w-4xl max-h-full">
+            <button onclick="closeLightbox()" class="absolute top-4 right-4 text-white text-2xl hover:text-accent transition-colors z-10">
+                <i class="fas fa-times"></i>
+            </button>
+            <img id="lightbox-image" src="" alt="" class="max-w-full max-h-full object-contain">
+            <div class="absolute bottom-4 left-4 right-4 text-white">
+                <h3 id="lightbox-title" class="text-xl font-semibold mb-2"></h3>
+                <p id="lightbox-description" class="text-secondary-200"></p>
+                <div class="flex space-x-4 mt-4">
+                    <button onclick="shareImage('facebook')" class="text-white hover:text-accent transition-colors">
+                        <i class="fab fa-facebook-f text-xl"></i>
+                    </button>
+                    <button onclick="shareImage('twitter')" class="text-white hover:text-accent transition-colors">
+                        <i class="fab fa-twitter text-xl"></i>
+                    </button>
+                    <button onclick="shareImage('instagram')" class="text-white hover:text-accent transition-colors">
+                        <i class="fab fa-instagram text-xl"></i>
+                    </button>
+                    <button onclick="downloadImage()" class="text-white hover:text-accent transition-colors">
+                        <i class="fas fa-download text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Photo Submission Modal -->
+    <div id="submission-modal" class="fixed inset-0 bg-black bg-opacity-50 z-90 hidden items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-md w-full p-6">
+            <div class="text-center mb-6">
+                <h3 class="font-headline text-2xl font-bold text-primary mb-2">Share Your Moment</h3>
+                <p class="text-text-secondary">Upload your favorite ShivCafe photo and become part of our visual story.</p>
+            </div>
+            
+            <form id="photo-submission-form">
+                <div class="mb-4">
+                    <label class="block text-text-primary font-medium mb-2">Your Photo</label>
+                    <div class="border-2 border-dashed border-secondary-300 rounded-lg p-8 text-center hover:border-accent transition-colors cursor-pointer" onclick="document.getElementById('photo-upload').click()">
+                        <i class="fas fa-cloud-upload-alt text-4xl text-secondary-400 mb-2"></i>
+                        <p class="text-text-secondary">Click to upload or drag and drop</p>
+                        <p class="text-sm text-text-secondary mt-1">JPG, PNG up to 10MB</p>
+                    </div>
+                    <input type="file" id="photo-upload" accept="image/*" class="hidden">
+                </div>
+                
+                <div class="mb-4">
+                    <label class="block text-text-primary font-medium mb-2">Your Name</label>
+                    <input type="text" class="input-field" placeholder="Enter your name">
+                </div>
+                
+                <div class="mb-6">
+                    <label class="block text-text-primary font-medium mb-2">Caption (Optional)</label>
+                    <textarea class="input-field h-20 resize-none" placeholder="Tell us about this moment..."></textarea>
+                </div>
+                
+                <div class="flex justify-between">
+                    <button type="button" onclick="closeSubmissionModal()" class="btn-secondary">
+                        <i class="fas fa-times mr-2"></i>
+                        Cancel
+                    </button>
+                    <button type="submit" class="btn-primary">
+                        <i class="fas fa-paper-plane mr-2"></i>
+                        Submit Photo
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Loading Spinner
+        window.addEventListener('load', function() {
+            setTimeout(() => {
+                document.getElementById('loading-spinner').style.opacity = '0';
+                setTimeout(() => {
+                    document.getElementById('loading-spinner').style.display = 'none';
+                }, 300);
+            }, 1000);
+        });
+
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            offset: 100
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-white', 'shadow-warm-lg');
+                navbar.classList.remove('bg-transparent');
+            } else {
+                navbar.classList.remove('bg-white', 'shadow-warm-lg');
+                navbar.classList.add('bg-transparent');
+            }
+        });
+
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Gallery Filter Functionality
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const filter = this.getAttribute('data-filter');
+                
+                // Update active button
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
+                
+                // Filter gallery items
+                galleryItems.forEach(item => {
+                    if (filter === 'all' || item.classList.contains(filter)) {
+                        item.style.display = 'block';
+                        setTimeout(() => {
+                            item.style.opacity = '1';
+                            item.style.transform = 'scale(1)';
+                        }, 50);
+                    } else {
+                        item.style.opacity = '0';
+                        item.style.transform = 'scale(0.8)';
+                        setTimeout(() => {
+                            item.style.display = 'none';
+                        }, 300);
+                    }
+                });
+            });
+        });
+
+        // Lightbox Functionality
+        function openLightbox(img) {
+            const modal = document.getElementById('lightbox-modal');
+            const lightboxImg = document.getElementById('lightbox-image');
+            const title = document.getElementById('lightbox-title');
+            const description = document.getElementById('lightbox-description');
+            
+            lightboxImg.src = img.src;
+            lightboxImg.alt = img.alt;
+            
+            // Extract title and description from the overlay
+            const overlay = img.parentElement.querySelector('.absolute.bottom-0');
+            if (overlay) {
+                const titleElement = overlay.querySelector('p.text-white');
+                const descElement = overlay.querySelector('p.text-secondary-200');
+                title.textContent = titleElement ? titleElement.textContent : '';
+                description.textContent = descElement ? descElement.textContent : '';
+            }
+            
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            const modal = document.getElementById('lightbox-modal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Share Image Function
+        function shareImage(platform) {
+            const img = document.getElementById('lightbox-image');
+            const title = document.getElementById('lightbox-title').textContent;
+            const url = window.location.href;
+            
+            let shareUrl = '';
+            switch(platform) {
+                case 'facebook':
+                    shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`;
+                    break;
+                case 'twitter':
+                    shareUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(title + ' - ShivCafe')}&url=${encodeURIComponent(url)}`;
+                    break;
+                case 'instagram':
+                    // Instagram doesn't support direct sharing, so we'll copy the hashtags
+                    copyHashtags();
+                    return;
+            }
+            
+            window.open(shareUrl, '_blank', 'width=600,height=400');
+        }
+
+        // Download Image Function
+        function downloadImage() {
+            const img = document.getElementById('lightbox-image');
+            const link = document.createElement('a');
+            link.href = img.src;
+            link.download = 'shivcafe-moment.jpg';
+            link.click();
+        }
+
+        // Photo Submission Modal Functions
+        function openSubmissionModal() {
+            document.getElementById('submission-modal').classList.remove('hidden');
+            document.getElementById('submission-modal').classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeSubmissionModal() {
+            document.getElementById('submission-modal').classList.add('hidden');
+            document.getElementById('submission-modal').classList.remove('flex');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Copy Hashtags Function
+        function copyHashtags() {
+            const hashtags = '#ShivCafe #CoffeeArt #CafeLife #CoffeeLover #Barista #CoffeeTime #LocalCafe #CommunitySpace';
+            navigator.clipboard.writeText(hashtags).then(() => {
+                // Show success message
+                const button = event.target.closest('button');
+                const originalText = button.innerHTML;
+                button.innerHTML = '<i class="fas fa-check mr-2"></i>Copied!';
+                button.classList.add('bg-success', 'text-white');
+                
+                setTimeout(() => {
+                    button.innerHTML = originalText;
+                    button.classList.remove('bg-success', 'text-white');
+                }, 2000);
+            });
+        }
+
+        // Scroll to Gallery Function
+        function scrollToGallery() {
+            document.getElementById('gallery-section').scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+
+        // Load More Functionality
+        document.getElementById('load-more-btn').addEventListener('click', function() {
+            // Simulate loading more images
+            this.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Loading...';
+            
+            setTimeout(() => {
+                this.innerHTML = '<i class="fas fa-check mr-2"></i>All Photos Loaded';
+                this.disabled = true;
+                this.classList.add('opacity-50', 'cursor-not-allowed');
+            }, 2000);
+        });
+
+        // Photo Upload Preview
+        document.getElementById('photo-upload').addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const uploadArea = document.querySelector('.border-dashed');
+                    uploadArea.innerHTML = `
+                        <img src="${e.target.result}" alt="Preview" class="max-w-full h-32 object-cover rounded-lg mx-auto mb-2">
+                        <p class="text-text-secondary">Photo selected: ${file.name}</p>
+                        <p class="text-sm text-text-secondary mt-1">Click to change</p>
+                    `;
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+
+        // Form Submission
+        document.getElementById('photo-submission-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Simulate form submission
+            const submitBtn = this.querySelector('button[type="submit"]');
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Submitting...';
+            submitBtn.disabled = true;
+            
+            setTimeout(() => {
+                submitBtn.innerHTML = '<i class="fas fa-check mr-2"></i>Submitted!';
+                submitBtn.classList.add('bg-success');
+                
+                setTimeout(() => {
+                    closeSubmissionModal();
+                    // Reset form
+                    this.reset();
+                    document.querySelector('.border-dashed').innerHTML = `
+                        <i class="fas fa-cloud-upload-alt text-4xl text-secondary-400 mb-2"></i>
+                        <p class="text-text-secondary">Click to upload or drag and drop</p>
+                        <p class="text-sm text-text-secondary mt-1">JPG, PNG up to 10MB</p>
+                    `;
+                    submitBtn.innerHTML = '<i class="fas fa-paper-plane mr-2"></i>Submit Photo';
+                    submitBtn.disabled = false;
+                    submitBtn.classList.remove('bg-success');
+                }, 1500);
+            }, 2000);
+        });
+
+        // Back to top button
+        const backToTopButton = document.getElementById('back-to-top');
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.add('opacity-0', 'invisible');
+                backToTopButton.classList.remove('opacity-100', 'visible');
+            }
+        });
+
+        backToTopButton.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Close modals when clicking outside
+        document.getElementById('lightbox-modal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeLightbox();
+            }
+        });
+
+        document.getElementById('submission-modal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeSubmissionModal();
+            }
+        });
+
+        // Keyboard navigation for lightbox
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeLightbox();
+                closeSubmissionModal();
+            }
+        });
+
+        // Add hover effects to navigation links
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('mouseenter', function() {
+                this.querySelector('span').style.width = '100%';
+            });
+            link.addEventListener('mouseleave', function() {
+                if (!this.classList.contains('text-primary')) {
+                    this.querySelector('span').style.width = '0%';
+                }
+            });
+        });
+
+        // Filter button styles
+        const style = document.createElement('style');
+        style.textContent = `
+            .filter-btn {
+                @apply px-6 py-3 rounded-lg font-cta font-medium transition-all duration-300 border-2 border-secondary-300 text-text-secondary hover:border-accent hover:text-accent;
+            }
+            .filter-btn.active {
+                @apply bg-accent text-white border-accent;
+            }
+            .gallery-item {
+                transition: opacity 0.3s ease, transform 0.3s ease;
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+<script id="dhws-dataInjector" src="../public/dhws-data-injector.js"></script>
+</body>
+</html>
